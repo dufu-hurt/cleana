@@ -1,14 +1,10 @@
-
-###################
-####python 3.x#####
-#discord.py==1.4.0#
-###################
-
 import discord
 import os
 import asyncio
 
 client = discord.Client()
+access_token=os.environ["BOT_TOKEN"]
+client.run(access_token)
 
 
 @client.event
@@ -35,6 +31,4 @@ async def on_message(message):
         except:
             pass
 
-
-access_token=os.environ["BOT_TOKEN"]
-client.run(access_token)
+print(res)
